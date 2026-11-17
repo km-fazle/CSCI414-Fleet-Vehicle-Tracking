@@ -1,0 +1,663 @@
+FleetTrace lab run 20261113T170026Z
+date_utc=2026-11-13T17:00:26Z
+Linux 86c71ab607c5 6.10.14-linuxkit #1 SMP Tue Apr 15 16:00:54 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Python 3.12.3
+db version v8.0.38
+Build Info: {
+nftables v1.0.9 (Old Doc Yak #3)
+ip utility, iproute2-6.1.0, libbpf 1.3.0
+tc utility, iproute2-6.1.0, libbpf 1.3.0
+tcpdump version 4.99.4
+iperf 3.16 (cJSON 1.7.15)
+Modern traceroute for Linux, version 2.1.5
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+missing command: mongosh
+FleetTrace lab run 20261113T170058Z
+date_utc=2026-11-13T17:00:58Z
+Linux 86c71ab607c5 6.10.14-linuxkit #1 SMP Tue Apr 15 16:00:54 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Python 3.12.3
+db version v8.0.38
+Build Info: {
+nftables v1.0.9 (Old Doc Yak #3)
+ip utility, iproute2-6.1.0, libbpf 1.3.0
+tc utility, iproute2-6.1.0, libbpf 1.3.0
+tcpdump version 4.99.4
+iperf 3.16 (cJSON 1.7.15)
+Modern traceroute for Linux, version 2.1.5
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+doctor: namespaces, nftables, and netem are available
+..................                                                       [100%]
+=============================== warnings summary ===============================
+../opt/fleettrace-venv/lib/python3.12/site-packages/starlette/testclient.py:40
+  /opt/fleettrace-venv/lib/python3.12/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+network namespaces are up
+# 2026-11-13T17:01:00Z
+ft-client (id: 1)
+ft-data (id: 4)
+ft-service (id: 3)
+ft-router (id: 2)
+
+# client
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 823d:635:f1c6::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr be6c:cd71:3973::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr f248:252e:a0c9::
+14: c-ns@if13: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether ca:1d:dd:80:2f:c3 brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.10.10.10/24 scope global c-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::c81d:ddff:fe80:2fc3/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# router
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 3ae2:946e:9aee::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr b280:e48f:cae::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 4202:d81b:f614::
+13: c-rt@if14: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 32:4a:a2:37:f9:e7 brd ff:ff:ff:ff:ff:ff link-netns ft-client
+    inet 10.10.10.1/24 scope global c-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::304a:a2ff:fe37:f9e7/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+15: s-rt@if16: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 66:2e:ef:eb:a0:cc brd ff:ff:ff:ff:ff:ff link-netns ft-service
+    inet 10.20.20.1/24 scope global s-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::642e:efff:feeb:a0cc/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+17: d-rt@if18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 7a:68:51:a5:f5:77 brd ff:ff:ff:ff:ff:ff link-netns ft-data
+    inet 10.30.30.1/24 scope global d-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::7868:51ff:fea5:f577/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# service
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 7acd:9df0:f659::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr ca58:c1ff:c29b::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 4e89:c016:65c4::
+16: s-ns@if15: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 12:93:58:72:dc:34 brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.20.20.10/24 scope global s-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::1093:58ff:fe72:dc34/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# data
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr da40:4553:151e::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr fe85:7298:f189::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr beee:7f99:b4e7::
+18: d-ns@if17: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 96:8b:f4:46:83:34 brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.30.30.10/24 scope global d-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::948b:f4ff:fe46:8334/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+# ft-client
+default via 10.10.10.1 dev c-ns 
+10.10.10.0/24 dev c-ns proto kernel scope link src 10.10.10.10 
+
+# ft-router
+10.10.10.0/24 dev c-rt proto kernel scope link src 10.10.10.1 
+10.20.20.0/24 dev s-rt proto kernel scope link src 10.20.20.1 
+10.30.30.0/24 dev d-rt proto kernel scope link src 10.30.30.1 
+
+# ft-service
+default via 10.20.20.1 dev s-ns 
+10.20.20.0/24 dev s-ns proto kernel scope link src 10.20.20.10 
+
+# ft-data
+default via 10.30.30.1 dev d-ns 
+10.30.30.0/24 dev d-ns proto kernel scope link src 10.30.30.10 
+
+net.ipv4.ip_forward = 1
+/work/network/tls/certs/server.crt: OK
+X509v3 Subject Alternative Name: 
+    IP Address:10.20.20.10, DNS:fleettrace-api.lab
+certificate SAN includes 10.20.20.10
+about to fork child process, waiting until server is ready for connections.
+forked process: 516
+child process started successfully, parent exiting
+mongod pid 516
+API pid 573
+curl: (7) Failed to connect to 10.20.20.10 port 8443 after 0 ms: Couldn't connect to server
+API ready
+.                                                                        [100%]
+wrote /work/data/fixtures/fleet-seed42.json events=25 sha256=7bb0abf48f2cac688a00231fa5fb2565770f43d5949a0395cf3c1495f714bf92
+vehicle demo-001 -> 201
+vehicle demo-002 -> 201
+vehicle demo-003 -> 201
+vehicle demo-004 -> 201
+vehicle demo-005 -> 201
+# 2026-11-13T17:01:03Z
+traceroute to 10.20.20.10 (10.20.20.10), 4 hops max, 60 byte packets
+ 1  10.10.10.1  0.063 ms
+ 2  10.20.20.10  0.033 ms
+PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.
+64 bytes from 10.20.20.10: icmp_seq=1 ttl=63 time=0.072 ms
+64 bytes from 10.20.20.10: icmp_seq=2 ttl=63 time=0.097 ms
+
+--- 10.20.20.10 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1036ms
+rtt min/avg/max/mdev = 0.072/0.084/0.097/0.012 ms
+client to data ping blocked (rc=1)
+{"status":"live"}
+table inet fleettrace {
+	chain forward {
+		type filter hook forward priority filter; policy drop;
+		ct state established,related counter packets 226 bytes 40048 accept
+		iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.10 tcp dport 8443 counter packets 7 bytes 420 accept
+		iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.10 ip daddr 10.30.30.10 tcp dport 27017 counter packets 10 bytes 600 accept
+		iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter packets 1 bytes 84 accept
+		iifname "s-rt" oifname "c-rt" ip saddr 10.20.20.0/24 ip daddr 10.10.10.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.0/24 ip daddr 10.30.30.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "d-rt" oifname "s-rt" ip saddr 10.30.30.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "c-rt" oifname "d-rt" ip daddr 10.30.30.0/24 counter packets 7 bytes 468 drop
+		iifname "d-rt" oifname "c-rt" ip saddr 10.30.30.0/24 counter packets 0 bytes 0 drop
+		counter packets 0 bytes 0 drop
+	}
+}
+client-to-data drop counter packets=7
+network verification passed
+{"status":"live"}
+curl without the lab CA failed as expected (rc=60)
+TLS certificate verification passed
+{"crud": "ok", "fresh_event_id": "crud-20261113T170058Z-fresh", "stale_event_id": "crud-20261113T170058Z-stale"}
+API pid 701
+curl: (7) Failed to connect to 10.20.20.10 port 8443 after 0 ms: Couldn't connect to server
+API ready
+{"crud": "ok", "fresh_event_id": "crud-20261113T170058Z-fresh", "stale_event_id": "crud-20261113T170058Z-stale"}
+[
+  {
+    event_id: 'crud-20261113T170058Z-fresh',
+    event_time: ISODate('2026-11-13T17:01:13.175Z'),
+    location: { type: 'Point', coordinates: [ -73.9808123, 40.7543219 ] },
+    received_at: ISODate('2026-11-13T17:01:13.211Z')
+  }
+]
+create, update, persist, and MongoDB readback passed
+{"operation": "create_vehicle", "event_id": "", "vehicle_id": "lab-errors", "send_ts_utc": "2026-11-13T17:01:20.944Z", "response_ts_utc": "2026-11-13T17:01:20.951Z", "http_status": 201, "latency_ms": 7.555, "timeout": false, "error": "", "body": {"vehicle_id": "lab-errors", "label": "Errors", "type": "simulated", "active": true, "metadata": {}, "created_at": "2026-11-13T17:01:20.949Z", "updated_at": "2026-11-13T17:01:20.949Z", "last_known": null}, "ok": true}
+{"operation": "create_vehicle", "event_id": "", "vehicle_id": "lab-errors", "send_ts_utc": "2026-11-13T17:01:21.050Z", "response_ts_utc": "2026-11-13T17:01:21.056Z", "http_status": 409, "latency_ms": 5.556, "timeout": false, "error": "", "body": {"detail": "vehicle_id already exists"}, "ok": false}
+{"operation": "post_telemetry", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:01:21.154Z", "response_ts_utc": "2026-11-13T17:01:21.161Z", "http_status": 422, "latency_ms": 7.715, "timeout": false, "error": "", "body": {"detail": [{"type": "less_than_equal", "loc": ["body", "lat"], "msg": "Input should be less than or equal to 90", "input": 91, "ctx": {"le": 90.0}}]}, "ok": false}
+{"operation": "post_telemetry", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:01:21.270Z", "response_ts_utc": "2026-11-13T17:01:21.275Z", "http_status": 404, "latency_ms": 5.411, "timeout": false, "error": "", "body": {"detail": "vehicle not found"}, "ok": false}
+{"operation": "live", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:01:27.081Z", "response_ts_utc": "2026-11-13T17:01:27.101Z", "http_status": 200, "latency_ms": 20.186, "timeout": false, "error": "", "body": {"status": "live"}, "ok": true}
+{"operation": "ready", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:01:27.211Z", "response_ts_utc": "2026-11-13T17:01:29.425Z", "http_status": 503, "latency_ms": 2214.002, "timeout": false, "error": "", "body": {"detail": {"message": "database unavailable", "cause": "ping failed"}}, "ok": false}
+about to fork child process, waiting until server is ready for connections.
+forked process: 813
+child process started successfully, parent exiting
+mongod pid 813
+API ready
+API error paths passed
+tcpdump: listening on s-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+tcpdump: tcpdump: listening on d-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+listening on c-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+{"operation": "post_telemetry", "event_id": "cap-20261113T170058Z-000001", "vehicle_id": "demo-001", "send_ts_utc": "2026-11-13T17:01:32.072Z", "response_ts_utc": "2026-11-13T17:01:32.083Z", "http_status": 201, "latency_ms": 11.321, "timeout": false, "error": "", "body": {"event_id": "cap-20261113T170058Z-000001", "received_at": "2026-11-13T17:01:32.079Z", "ingest_latency_ms": 2.556, "duplicate": false, "event": {"event_id": "cap-20261113T170058Z-000001", "vehicle_id": "demo-001", "sequence": 900001, "event_time": "2026-11-13T17:01:31.997Z", "received_at": "2026-11-13T17:01:32.079Z", "lat": 40.7543219, "lon": -73.9808123, "simulation_run_id": "capture-20261113T170058Z", "source_type": "synthetic", "source_record_id": null, "generation_method": "deterministic_linear_track", "simulation_seed": 42}}, "ok": true}
+17 packets captured17 packets captured6 packets captured
+6 packets received by filter
+
+0 packets dropped by kernel17 packets received by filter
+
+0 packets dropped by kernel
+
+17 packets received by filter
+0 packets dropped by kernel
+client-router.pcap: 5252 bytes, plaintext latitude absent
+router-service.pcap: 5252 bytes, plaintext latitude absent
+router-data.pcap: 1530 bytes; coordinate visible on data path: False
+packet capture checks passed
+API liveness check failed: None ConnectError
+FleetTrace lab run 20261113T170217Z
+date_utc=2026-11-13T17:02:17Z
+Linux 86c71ab607c5 6.10.14-linuxkit #1 SMP Tue Apr 15 16:00:54 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+Python 3.12.3
+db version v8.0.38
+Build Info: {
+nftables v1.0.9 (Old Doc Yak #3)
+ip utility, iproute2-6.1.0, libbpf 1.3.0
+tc utility, iproute2-6.1.0, libbpf 1.3.0
+tcpdump version 4.99.4
+iperf 3.16 (cJSON 1.7.15)
+Modern traceroute for Linux, version 2.1.5
+OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+doctor: namespaces, nftables, and netem are available
+..................                                                       [100%]
+=============================== warnings summary ===============================
+../opt/fleettrace-venv/lib/python3.12/site-packages/starlette/testclient.py:40
+  /opt/fleettrace-venv/lib/python3.12/site-packages/starlette/testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+network namespaces are up
+# 2026-11-13T17:02:29Z
+ft-client (id: 1)
+ft-data (id: 3)
+ft-service (id: 2)
+ft-router (id: 5)
+
+# client
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 1629:5303:a123::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 6aa9:86f5:a2cc::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 869b:f5cc:e45e::
+21: c-ns@if20: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether aa:de:2e:b4:a3:32 brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.10.10.10/24 scope global c-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a8de:2eff:feb4:a332/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# router
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 9e31:ef9a:e58f::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr e6eb:1437:5832::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr a81:eb78:e926::
+20: c-rt@if21: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 46:e5:98:d6:e8:15 brd ff:ff:ff:ff:ff:ff link-netns ft-client
+    inet 10.10.10.1/24 scope global c-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::44e5:98ff:fed6:e815/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+22: s-rt@if23: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 06:ee:ff:c1:4e:dd brd ff:ff:ff:ff:ff:ff link-netns ft-service
+    inet 10.20.20.1/24 scope global s-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::4ee:ffff:fec1:4edd/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+24: d-rt@if25: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 02:8b:79:19:e0:52 brd ff:ff:ff:ff:ff:ff link-netns ft-data
+    inet 10.30.30.1/24 scope global d-rt
+       valid_lft forever preferred_lft forever
+    inet6 fe80::8b:79ff:fe19:e052/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# service
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 4a70:b4d:b2c3::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 2e06:7bd1:caed::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 3e9f:43df:f894::
+23: s-ns@if22: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 6a:a4:c3:fe:13:04 brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.20.20.10/24 scope global s-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::68a4:c3ff:fefe:1304/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+
+# data
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+3: gre0@NONE: <NOARP> mtu 1476 qdisc noop state DOWN group default qlen 1000
+    link/gre 0.0.0.0 brd 0.0.0.0
+4: gretap0@NONE: <BROADCAST,MULTICAST> mtu 1462 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+5: erspan0@NONE: <BROADCAST,MULTICAST> mtu 1450 qdisc noop state DOWN group default qlen 1000
+    link/ether 00:00:00:00:00:00 brd ff:ff:ff:ff:ff:ff
+6: ip_vti0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/ipip 0.0.0.0 brd 0.0.0.0
+7: ip6_vti0@NONE: <NOARP> mtu 1428 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr a67d:b71:1c69::
+8: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
+    link/sit 0.0.0.0 brd 0.0.0.0
+9: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN group default qlen 1000
+    link/tunnel6 :: brd :: permaddr 92e9:262e:c739::
+10: ip6gre0@NONE: <NOARP> mtu 1448 qdisc noop state DOWN group default qlen 1000
+    link/gre6 :: brd :: permaddr 96d9:280f:5143::
+25: d-ns@if24: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 36:44:e2:f5:55:3b brd ff:ff:ff:ff:ff:ff link-netns ft-router
+    inet 10.30.30.10/24 scope global d-ns
+       valid_lft forever preferred_lft forever
+    inet6 fe80::3444:e2ff:fef5:553b/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+# ft-client
+default via 10.10.10.1 dev c-ns 
+10.10.10.0/24 dev c-ns proto kernel scope link src 10.10.10.10 
+
+# ft-router
+10.10.10.0/24 dev c-rt proto kernel scope link src 10.10.10.1 
+10.20.20.0/24 dev s-rt proto kernel scope link src 10.20.20.1 
+10.30.30.0/24 dev d-rt proto kernel scope link src 10.30.30.1 
+
+# ft-service
+default via 10.20.20.1 dev s-ns 
+10.20.20.0/24 dev s-ns proto kernel scope link src 10.20.20.10 
+
+# ft-data
+default via 10.30.30.1 dev d-ns 
+10.30.30.0/24 dev d-ns proto kernel scope link src 10.30.30.10 
+
+net.ipv4.ip_forward = 1
+/work/network/tls/certs/server.crt: OK
+X509v3 Subject Alternative Name: 
+    IP Address:10.20.20.10, DNS:fleettrace-api.lab
+certificate SAN includes 10.20.20.10
+about to fork child process, waiting until server is ready for connections.
+forked process: 1237
+child process started successfully, parent exiting
+mongod pid 1237
+API pid 1302
+curl: (7) Failed to connect to 10.20.20.10 port 8443 after 0 ms: Couldn't connect to server
+API ready
+.                                                                        [100%]
+wrote /work/data/fixtures/fleet-seed42.json events=25 sha256=7bb0abf48f2cac688a00231fa5fb2565770f43d5949a0395cf3c1495f714bf92
+vehicle demo-001 -> 409
+vehicle demo-002 -> 409
+vehicle demo-003 -> 409
+vehicle demo-004 -> 409
+vehicle demo-005 -> 409
+# 2026-11-13T17:02:33Z
+traceroute to 10.20.20.10 (10.20.20.10), 4 hops max, 60 byte packets
+ 1  10.10.10.1  0.171 ms
+ 2  10.20.20.10  0.142 ms
+PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.
+64 bytes from 10.20.20.10: icmp_seq=1 ttl=63 time=0.097 ms
+64 bytes from 10.20.20.10: icmp_seq=2 ttl=63 time=0.532 ms
+
+--- 10.20.20.10 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1066ms
+rtt min/avg/max/mdev = 0.097/0.314/0.532/0.217 ms
+client to data ping blocked (rc=1)
+{"status":"live"}
+table inet fleettrace {
+	chain forward {
+		type filter hook forward priority filter; policy drop;
+		ct state established,related counter packets 225 bytes 40500 accept
+		iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.10 tcp dport 8443 counter packets 7 bytes 420 accept
+		iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.10 ip daddr 10.30.30.10 tcp dport 27017 counter packets 10 bytes 600 accept
+		iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter packets 1 bytes 84 accept
+		iifname "s-rt" oifname "c-rt" ip saddr 10.20.20.0/24 ip daddr 10.10.10.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.0/24 ip daddr 10.30.30.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "d-rt" oifname "s-rt" ip saddr 10.30.30.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter packets 0 bytes 0 accept
+		iifname "c-rt" oifname "d-rt" ip daddr 10.30.30.0/24 counter packets 7 bytes 468 drop
+		iifname "d-rt" oifname "c-rt" ip saddr 10.30.30.0/24 counter packets 0 bytes 0 drop
+		counter packets 0 bytes 0 drop
+	}
+}
+client-to-data drop counter packets=7
+network verification passed
+{"status":"live"}
+curl without the lab CA failed as expected (rc=60)
+TLS certificate verification passed
+{"crud": "ok", "fresh_event_id": "crud-20261113T170217Z-fresh", "stale_event_id": "crud-20261113T170217Z-stale"}
+API pid 1430
+curl: (7) Failed to connect to 10.20.20.10 port 8443 after 0 ms: Couldn't connect to server
+API ready
+{"crud": "ok", "fresh_event_id": "crud-20261113T170217Z-fresh", "stale_event_id": "crud-20261113T170217Z-stale"}
+[
+  {
+    event_id: 'crud-20261113T170217Z-fresh',
+    event_time: ISODate('2026-11-13T17:02:42.525Z'),
+    location: { type: 'Point', coordinates: [ -73.9808123, 40.7543219 ] },
+    received_at: ISODate('2026-11-13T17:02:42.590Z')
+  }
+]
+create, update, persist, and MongoDB readback passed
+{"operation": "create_vehicle", "event_id": "", "vehicle_id": "lab-errors", "send_ts_utc": "2026-11-13T17:02:49.405Z", "response_ts_utc": "2026-11-13T17:02:49.417Z", "http_status": 409, "latency_ms": 11.975, "timeout": false, "error": "", "body": {"detail": "vehicle_id already exists"}, "ok": false}
+{"operation": "create_vehicle", "event_id": "", "vehicle_id": "lab-errors", "send_ts_utc": "2026-11-13T17:02:49.592Z", "response_ts_utc": "2026-11-13T17:02:49.598Z", "http_status": 409, "latency_ms": 6.23, "timeout": false, "error": "", "body": {"detail": "vehicle_id already exists"}, "ok": false}
+{"operation": "post_telemetry", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:02:49.706Z", "response_ts_utc": "2026-11-13T17:02:49.714Z", "http_status": 422, "latency_ms": 8.0, "timeout": false, "error": "", "body": {"detail": [{"type": "less_than_equal", "loc": ["body", "lat"], "msg": "Input should be less than or equal to 90", "input": 91, "ctx": {"le": 90.0}}]}, "ok": false}
+{"operation": "post_telemetry", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:02:49.823Z", "response_ts_utc": "2026-11-13T17:02:49.830Z", "http_status": 404, "latency_ms": 6.863, "timeout": false, "error": "", "body": {"detail": "vehicle not found"}, "ok": false}
+{"operation": "live", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:02:55.597Z", "response_ts_utc": "2026-11-13T17:02:55.607Z", "http_status": 200, "latency_ms": 10.523, "timeout": false, "error": "", "body": {"status": "live"}, "ok": true}
+{"operation": "ready", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:02:55.694Z", "response_ts_utc": "2026-11-13T17:02:57.988Z", "http_status": 503, "latency_ms": 2294.128, "timeout": false, "error": "", "body": {"detail": {"message": "database unavailable", "cause": "ping failed"}}, "ok": false}
+about to fork child process, waiting until server is ready for connections.
+forked process: 1542
+child process started successfully, parent exiting
+mongod pid 1542
+API ready
+API error paths passed
+tcpdump: listening on s-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+tcpdump: tcpdump: listening on d-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+listening on c-rt, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+{"operation": "post_telemetry", "event_id": "cap-20261113T170217Z-000001", "vehicle_id": "demo-001", "send_ts_utc": "2026-11-13T17:03:00.671Z", "response_ts_utc": "2026-11-13T17:03:00.684Z", "http_status": 201, "latency_ms": 13.358, "timeout": false, "error": "", "body": {"event_id": "cap-20261113T170217Z-000001", "received_at": "2026-11-13T17:03:00.680Z", "ingest_latency_ms": 2.461, "duplicate": false, "event": {"event_id": "cap-20261113T170217Z-000001", "vehicle_id": "demo-001", "sequence": 900001, "event_time": "2026-11-13T17:03:00.573Z", "received_at": "2026-11-13T17:03:00.680Z", "lat": 40.7543219, "lon": -73.9808123, "simulation_run_id": "capture-20261113T170217Z", "source_type": "synthetic", "source_record_id": null, "generation_method": "deterministic_linear_track", "simulation_seed": 42}}, "ok": true}
+18 packets captured
+18 packets received by filter
+0 packets dropped by kernel
+18 packets captured
+18 packets received by filter
+0 packets dropped by kernel
+6 packets captured
+6 packets received by filter
+0 packets dropped by kernel
+client-router.pcap: 5334 bytes, plaintext latitude absent
+router-service.pcap: 5334 bytes, plaintext latitude absent
+router-data.pcap: 1530 bytes; coordinate visible on data path: False
+packet capture checks passed
+{"output_dir": "/work/evidence/results/baseline/20261113T170217Z", "success_rate": 1.0, "workload_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476"}
+scenario baseline written to /work/evidence/results/baseline/20261113T170217Z
+{"output_dir": "/work/evidence/results/delay/20261113T170217Z", "success_rate": 1.0, "workload_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476"}
+scenario delay written to /work/evidence/results/delay/20261113T170217Z
+impairment removed
+{
+  "left": "/work/evidence/results/baseline/20261113T170217Z/summary.json",
+  "right": "/work/evidence/results/delay/20261113T170217Z/summary.json",
+  "left_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "right_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "same_coordinates": true,
+  "left_logical_posts": 200,
+  "right_logical_posts": 200
+}
+{"operation": "create_vehicle", "event_id": "", "vehicle_id": "lab-recovery", "send_ts_utc": "2026-11-13T17:04:37.883Z", "response_ts_utc": "2026-11-13T17:04:37.893Z", "http_status": 201, "latency_ms": 9.867, "timeout": false, "error": "", "body": {"vehicle_id": "lab-recovery", "label": "Recovery", "type": "simulated", "active": true, "metadata": {}, "created_at": "2026-11-13T17:04:37.890Z", "updated_at": "2026-11-13T17:04:37.890Z", "last_known": null}, "ok": true}
+{"operation": "ready", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:04:43.168Z", "response_ts_utc": "2026-11-13T17:04:43.168Z", "http_status": null, "latency_ms": 0.858, "timeout": false, "error": "ConnectError", "body": null, "ok": false}
+{"operation": "post_telemetry", "event_id": "recovery-20261113T170217Z-lost", "vehicle_id": "lab-recovery", "send_ts_utc": "2026-11-13T17:04:43.247Z", "response_ts_utc": "2026-11-13T17:04:43.248Z", "http_status": null, "latency_ms": 0.884, "timeout": false, "error": "ConnectError", "body": null, "ok": false}
+API pid 1792
+curl: (7) Failed to connect to 10.20.20.10 port 8443 after 0 ms: Couldn't connect to server
+API ready
+{"operation": "ready", "event_id": "", "vehicle_id": "", "send_ts_utc": "2026-11-13T17:04:49.088Z", "response_ts_utc": "2026-11-13T17:04:49.094Z", "http_status": 200, "latency_ms": 6.471, "timeout": false, "error": "", "body": {"status": "ready"}, "ok": true}
+{"operation": "post_telemetry", "event_id": "recovery-20261113T170217Z-new", "vehicle_id": "lab-recovery", "send_ts_utc": "2026-11-13T17:04:49.190Z", "response_ts_utc": "2026-11-13T17:04:49.202Z", "http_status": 201, "latency_ms": 11.997, "timeout": false, "error": "", "body": {"event_id": "recovery-20261113T170217Z-new", "received_at": "2026-11-13T17:04:49.200Z", "ingest_latency_ms": 1.526, "duplicate": false, "event": {"event_id": "recovery-20261113T170217Z-new", "vehicle_id": "lab-recovery", "sequence": 2, "event_time": "2026-11-13T17:04:49.115Z", "received_at": "2026-11-13T17:04:49.200Z", "lat": 40.761, "lon": -73.971, "simulation_run_id": "failure-20261113T170217Z", "source_type": "synthetic", "source_record_id": null, "generation_method": "deterministic_linear_track", "simulation_seed": 42}}, "ok": true}
+{"operation": "get_latest", "event_id": "", "vehicle_id": "lab-recovery", "send_ts_utc": "2026-11-13T17:04:49.309Z", "response_ts_utc": "2026-11-13T17:04:49.317Z", "http_status": 200, "latency_ms": 7.914, "timeout": false, "error": "", "body": {"vehicle_id": "lab-recovery", "latest": {"event_id": "recovery-20261113T170217Z-new", "vehicle_id": "lab-recovery", "sequence": 2, "event_time": "2026-11-13T17:04:49.115Z", "received_at": "2026-11-13T17:04:49.200Z", "lat": 40.761, "lon": -73.971, "simulation_run_id": "failure-20261113T170217Z", "source_type": "synthetic", "source_record_id": null, "generation_method": "deterministic_linear_track", "simulation_seed": 42}, "age_ms": 200, "stale": false, "freshness_threshold_ms": 10000, "observed_at": "2026-11-13T17:04:49.315Z"}, "ok": true}
+{"operation": "post_telemetry", "event_id": "recovery-20261113T170217Z-lost", "vehicle_id": "lab-recovery", "send_ts_utc": "2026-11-13T17:04:49.393Z", "response_ts_utc": "2026-11-13T17:04:49.399Z", "http_status": 201, "latency_ms": 5.742, "timeout": false, "error": "", "body": {"event_id": "recovery-20261113T170217Z-lost", "received_at": "2026-11-13T17:04:49.398Z", "ingest_latency_ms": 0.338, "duplicate": false, "event": {"event_id": "recovery-20261113T170217Z-lost", "vehicle_id": "lab-recovery", "sequence": 1, "event_time": "2026-11-13T17:04:37.916Z", "received_at": "2026-11-13T17:04:49.398Z", "lat": 40.76, "lon": -73.97, "simulation_run_id": "failure-20261113T170217Z", "source_type": "synthetic", "source_record_id": null, "generation_method": "deterministic_linear_track", "simulation_seed": 42}}, "ok": true}
+{
+  "hold_seconds": 10.0,
+  "detected_down_at": "2026-11-13T17:04:43.168Z",
+  "failed_post_during_outage": {
+    "http_status": null,
+    "error": "ConnectError",
+    "event_id": "recovery-20261113T170217Z-lost",
+    "response_ts_utc": "2026-11-13T17:04:43.248Z"
+  },
+  "restart_invoked_at": "2026-11-13T17:04:47.956Z",
+  "ready_at": "2026-11-13T17:04:49.094Z",
+  "successful_write_at": "2026-11-13T17:04:49.202Z",
+  "recovery_duration_ms": 6034,
+  "restart_to_ready_ms": 1138,
+  "restart_to_successful_write_ms": 1246,
+  "post_recovery_event_id": "recovery-20261113T170217Z-new",
+  "retry_after_recovery": {
+    "event_id": "recovery-20261113T170217Z-lost",
+    "http_status": 201,
+    "duplicate": false,
+    "ok": true
+  },
+  "definition": "recovery_duration_ms is the detected-down response time to the first successful post. It includes the intentional hold, not only process restart time.",
+  "problems": []
+}
+recovery evidence written to /work/evidence/results/failure/20261113T170217Z
+lab run 20261113T170217Z finished

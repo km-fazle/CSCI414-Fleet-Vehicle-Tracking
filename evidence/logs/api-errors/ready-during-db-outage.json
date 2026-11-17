@@ -1,0 +1,18 @@
+{
+  "operation": "ready",
+  "event_id": "",
+  "vehicle_id": "",
+  "send_ts_utc": "2026-11-13T17:02:55.694Z",
+  "response_ts_utc": "2026-11-13T17:02:57.988Z",
+  "http_status": 503,
+  "latency_ms": 2294.128,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "detail": {
+      "message": "database unavailable",
+      "cause": "ping failed"
+    }
+  },
+  "ok": false
+}

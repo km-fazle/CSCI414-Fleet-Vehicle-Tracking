@@ -1,0 +1,9 @@
+{
+  "left": "/work/evidence/results/baseline/20261113T170217Z/summary.json",
+  "right": "/work/evidence/results/delay/20261113T170217Z/summary.json",
+  "left_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "right_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "same_coordinates": true,
+  "left_logical_posts": 200,
+  "right_logical_posts": 200
+}

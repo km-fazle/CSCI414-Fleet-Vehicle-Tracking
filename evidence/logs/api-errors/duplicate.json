@@ -1,0 +1,15 @@
+{
+  "operation": "create_vehicle",
+  "event_id": "",
+  "vehicle_id": "lab-errors",
+  "send_ts_utc": "2026-11-13T17:02:49.592Z",
+  "response_ts_utc": "2026-11-13T17:02:49.598Z",
+  "http_status": 409,
+  "latency_ms": 6.23,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "detail": "vehicle_id already exists"
+  },
+  "ok": false
+}

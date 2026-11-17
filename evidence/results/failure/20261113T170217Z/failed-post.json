@@ -1,0 +1,13 @@
+{
+  "operation": "post_telemetry",
+  "event_id": "recovery-20261113T170217Z-lost",
+  "vehicle_id": "lab-recovery",
+  "send_ts_utc": "2026-11-13T17:04:43.247Z",
+  "response_ts_utc": "2026-11-13T17:04:43.248Z",
+  "http_status": null,
+  "latency_ms": 0.884,
+  "timeout": false,
+  "error": "ConnectError",
+  "body": null,
+  "ok": false
+}

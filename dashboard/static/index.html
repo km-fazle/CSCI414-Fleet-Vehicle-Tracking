@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>FleetTrace</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23ffffff' width='16' height='16'/%3E%3Cpath fill='%23ee0000' d='M3 8.5 6.2 12 13 4.2l-1.2-1.1L6.2 9.6 4.1 7.4z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/vendor/leaflet.css">
+  <link rel="stylesheet" href="/static/app.css?v=10">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">FleetTrace</div>
+    <nav class="nav" aria-label="Primary">
+      <button type="button" data-view="live" class="on">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+        <span>Live map</span>
+      </button>
+      <button type="button" data-view="replay">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7L8 5z"/></svg>
+        <span>Replay</span>
+      </button>
+      <button type="button" data-view="reports">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 19h16v2H4v-2zm2-3h3V8H6v8zm5 0h3V4h-3v12zm5 0h3v-6h-3v6z"/></svg>
+        <span>Reports</span>
+      </button>
+      <button type="button" data-view="alerts">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 2 20h20L12 3zm0 5 6.2 10H5.8L12 8zm-1 3v4h2v-4h-2zm0 5v2h2v-2h-2z"/></svg>
+        <span>Alerts</span>
+      </button>
+    </nav>
+    <div class="status" id="status" aria-live="polite"><span>Reading the lab</span></div>
+  </header>
+
+  <div class="shell" id="shell" data-view="live">
+    <aside class="list">
+      <label class="search">
+        <span class="sr">Search vehicles</span>
+        <input id="filter" type="search" placeholder="Search vehicles" autocomplete="off">
+      </label>
+      <div id="roster"></div>
+    </aside>
+
+    <div class="stage">
+      <section class="map-wrap">
+        <div id="map" role="region" aria-label="Vehicle positions"></div>
+        <div class="basemap" role="group" aria-label="Base map">
+          <button type="button" id="basemap-map" class="on">Map</button>
+          <button type="button" id="basemap-sat">Satellite</button>
+        </div>
+      </section>
+
+      <aside class="drawer" id="inspector" hidden></aside>
+
+      <section class="sheet" id="replay" hidden>
+        <div class="sheet-head">
+          <h2>Replay</h2>
+          <p id="tape-note">Newest stored positions.</p>
+        </div>
+        <div class="sheet-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Event time</th>
+                <th>Vehicle</th>
+                <th class="num">Seq</th>
+                <th class="num">Latitude</th>
+                <th class="num">Longitude</th>
+                <th class="num">Lag</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody id="tape"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="page" id="compare" hidden></section>
+      <section class="page" id="alerts" hidden></section>
+    </div>
+  </div>
+
+  <script src="/static/vendor/leaflet.js"></script>
+  <script src="/static/app.js?v=14"></script>
+</body>
+</html>

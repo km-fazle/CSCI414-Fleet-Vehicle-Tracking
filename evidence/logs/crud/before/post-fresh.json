@@ -1,0 +1,9 @@
+{
+  "operation": "post_telemetry",
+  "http_status": 409,
+  "error": "",
+  "latency_ms": 7.899,
+  "body": {
+    "detail": "event_id already exists with a different payload"
+  }
+}

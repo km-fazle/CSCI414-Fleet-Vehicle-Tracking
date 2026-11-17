@@ -1,0 +1,26 @@
+{
+  "fresh": {
+    "event_id": "crud-20261113T170217Z-fresh",
+    "vehicle_id": "lab-fresh",
+    "event_time": "2026-11-13T17:02:42.525Z",
+    "lat": 40.7543219,
+    "lon": -73.9808123,
+    "sequence": 1,
+    "simulation_run_id": "crud-20261113T170217Z",
+    "source_type": "synthetic",
+    "generation_method": "deterministic_linear_track",
+    "simulation_seed": 42
+  },
+  "stale": {
+    "event_id": "crud-20261113T170217Z-stale",
+    "vehicle_id": "lab-stale",
+    "event_time": "2026-11-13T17:01:42.525Z",
+    "lat": 40.7301,
+    "lon": -73.9902,
+    "sequence": 1,
+    "simulation_run_id": "crud-20261113T170217Z",
+    "source_type": "synthetic",
+    "generation_method": "deterministic_linear_track",
+    "simulation_seed": 42
+  }
+}

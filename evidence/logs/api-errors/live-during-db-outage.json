@@ -1,0 +1,15 @@
+{
+  "operation": "live",
+  "event_id": "",
+  "vehicle_id": "",
+  "send_ts_utc": "2026-11-13T17:02:55.597Z",
+  "response_ts_utc": "2026-11-13T17:02:55.607Z",
+  "http_status": 200,
+  "latency_ms": 10.523,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "status": "live"
+  },
+  "ok": true
+}

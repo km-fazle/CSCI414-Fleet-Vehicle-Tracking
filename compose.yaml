@@ -1,0 +1,27 @@
+# FleetTrace lab host.
+# This is one privileged Ubuntu container, not three Docker bridge networks.
+# Docker bridge routing would bypass the project router. The container is the
+# Linux host; scripts inside it build three network namespaces and a router.
+
+name: fleettrace
+
+services:
+  lab:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: fleettrace-lab:local
+    container_name: fleettrace-lab
+    privileged: true
+    stdin_open: true
+    tty: true
+    working_dir: /work
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ./:/work
+      - fleettrace-data:/var/lib/fleettrace
+    command: ["sleep", "infinity"]
+
+volumes:
+  fleettrace-data:

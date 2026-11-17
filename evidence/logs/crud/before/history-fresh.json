@@ -1,0 +1,40 @@
+{
+  "operation": "get_history",
+  "http_status": 200,
+  "error": "",
+  "latency_ms": 2.389,
+  "body": {
+    "vehicle_id": "lab-fresh",
+    "order": "event_time,sequence,received_at ascending within the newest window",
+    "events": [
+      {
+        "event_id": "crud-20261113T170058Z-fresh",
+        "vehicle_id": "lab-fresh",
+        "sequence": 1,
+        "event_time": "2026-11-13T17:01:13.175Z",
+        "received_at": "2026-11-13T17:01:13.211Z",
+        "lat": 40.7543219,
+        "lon": -73.9808123,
+        "simulation_run_id": "crud-20261113T170058Z",
+        "source_type": "synthetic",
+        "source_record_id": null,
+        "generation_method": "deterministic_linear_track",
+        "simulation_seed": 42
+      },
+      {
+        "event_id": "crud-20261113T170217Z-fresh",
+        "vehicle_id": "lab-fresh",
+        "sequence": 1,
+        "event_time": "2026-11-13T17:02:42.525Z",
+        "received_at": "2026-11-13T17:02:42.590Z",
+        "lat": 40.7543219,
+        "lon": -73.9808123,
+        "simulation_run_id": "crud-20261113T170217Z",
+        "source_type": "synthetic",
+        "source_record_id": null,
+        "generation_method": "deterministic_linear_track",
+        "simulation_seed": 42
+      }
+    ]
+  }
+}

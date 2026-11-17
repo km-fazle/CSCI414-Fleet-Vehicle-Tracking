@@ -1,0 +1,18 @@
+.env
+.venv/
+var/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Generated TLS material. The lab script recreates these. Never commit private keys.
+network/tls/private/
+network/tls/certs/
+*.pem
+*.key
+*.srl
+
+# Evidence from a real lab run is part of the submission. Private keys stay ignored above.

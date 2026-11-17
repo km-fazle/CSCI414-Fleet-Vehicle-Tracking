@@ -1,0 +1,2 @@
+X509v3 Subject Alternative Name: 
+    IP Address:10.20.20.10, DNS:fleettrace-api.lab

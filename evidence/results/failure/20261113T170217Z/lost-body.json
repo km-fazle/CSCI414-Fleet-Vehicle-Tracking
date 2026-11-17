@@ -1,0 +1,12 @@
+{
+  "event_id": "recovery-20261113T170217Z-lost",
+  "vehicle_id": "lab-recovery",
+  "event_time": "2026-11-13T17:04:37.916Z",
+  "lat": 40.76,
+  "lon": -73.97,
+  "sequence": 1,
+  "simulation_run_id": "failure-20261113T170217Z",
+  "source_type": "synthetic",
+  "generation_method": "deterministic_linear_track",
+  "simulation_seed": 42
+}

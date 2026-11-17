@@ -1,0 +1,7 @@
+reading from file /work/evidence/pcap/router-data.pcap, link-type EN10MB (Ethernet), snapshot length 262144
+17:03:00.679114 IP 10.20.20.10.54744 > 10.30.30.10.27017: Flags [P.], seq 3230333182:3230333346, ack 2448177199, win 501, options [nop,nop,TS val 3295545733 ecr 947186557], length 164
+17:03:00.680497 IP 10.30.30.10.27017 > 10.20.20.10.54744: Flags [P.], seq 1:266, ack 164, win 506, options [nop,nop,TS val 947187730 ecr 3295545733], length 265
+17:03:00.680512 IP 10.20.20.10.54744 > 10.30.30.10.27017: Flags [.], ack 266, win 501, options [nop,nop,TS val 3295545735 ecr 947187730], length 0
+17:03:00.681016 IP 10.20.20.10.54744 > 10.30.30.10.27017: Flags [P.], seq 164:704, ack 266, win 501, options [nop,nop,TS val 3295545735 ecr 947187730], length 540
+17:03:00.683140 IP 10.30.30.10.27017 > 10.20.20.10.54744: Flags [P.], seq 266:311, ack 704, win 502, options [nop,nop,TS val 947187732 ecr 3295545735], length 45
+17:03:00.723532 IP 10.20.20.10.54744 > 10.30.30.10.27017: Flags [.], ack 311, win 501, options [nop,nop,TS val 3295545778 ecr 947187732], length 0

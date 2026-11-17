@@ -1,0 +1,13 @@
+{
+  "operation": "ready",
+  "event_id": "",
+  "vehicle_id": "",
+  "send_ts_utc": "2026-11-13T17:04:43.168Z",
+  "response_ts_utc": "2026-11-13T17:04:43.168Z",
+  "http_status": null,
+  "latency_ms": 0.858,
+  "timeout": false,
+  "error": "ConnectError",
+  "body": null,
+  "ok": false
+}

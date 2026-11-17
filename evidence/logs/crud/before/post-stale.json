@@ -1,0 +1,26 @@
+{
+  "operation": "post_telemetry",
+  "http_status": 201,
+  "error": "",
+  "latency_ms": 2.148,
+  "body": {
+    "event_id": "crud-20261113T170217Z-stale",
+    "received_at": "2026-11-13T17:02:42.595Z",
+    "ingest_latency_ms": 0.298,
+    "duplicate": false,
+    "event": {
+      "event_id": "crud-20261113T170217Z-stale",
+      "vehicle_id": "lab-stale",
+      "sequence": 1,
+      "event_time": "2026-11-13T17:01:42.525Z",
+      "received_at": "2026-11-13T17:02:42.595Z",
+      "lat": 40.7301,
+      "lon": -73.9902,
+      "simulation_run_id": "crud-20261113T170217Z",
+      "source_type": "synthetic",
+      "source_record_id": null,
+      "generation_method": "deterministic_linear_track",
+      "simulation_seed": 42
+    }
+  }
+}

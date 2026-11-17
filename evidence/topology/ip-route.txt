@@ -1,0 +1,17 @@
+# ft-client
+default via 10.10.10.1 dev c-ns 
+10.10.10.0/24 dev c-ns proto kernel scope link src 10.10.10.10 
+
+# ft-router
+10.10.10.0/24 dev c-rt proto kernel scope link src 10.10.10.1 
+10.20.20.0/24 dev s-rt proto kernel scope link src 10.20.20.1 
+10.30.30.0/24 dev d-rt proto kernel scope link src 10.30.30.1 
+
+# ft-service
+default via 10.20.20.1 dev s-ns 
+10.20.20.0/24 dev s-ns proto kernel scope link src 10.20.20.10 
+
+# ft-data
+default via 10.30.30.1 dev d-ns 
+10.30.30.0/24 dev d-ns proto kernel scope link src 10.30.30.10 
+

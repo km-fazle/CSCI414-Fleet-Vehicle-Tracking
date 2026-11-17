@@ -1,0 +1,28 @@
+{
+  "operation": "post_telemetry",
+  "event_id": "",
+  "vehicle_id": "",
+  "send_ts_utc": "2026-11-13T17:02:49.706Z",
+  "response_ts_utc": "2026-11-13T17:02:49.714Z",
+  "http_status": 422,
+  "latency_ms": 8.0,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "detail": [
+      {
+        "type": "less_than_equal",
+        "loc": [
+          "body",
+          "lat"
+        ],
+        "msg": "Input should be less than or equal to 90",
+        "input": 91,
+        "ctx": {
+          "le": 90.0
+        }
+      }
+    ]
+  },
+  "ok": false
+}

@@ -1,0 +1,32 @@
+{
+  "operation": "post_telemetry",
+  "event_id": "recovery-20261113T170217Z-new",
+  "vehicle_id": "lab-recovery",
+  "send_ts_utc": "2026-11-13T17:04:49.190Z",
+  "response_ts_utc": "2026-11-13T17:04:49.202Z",
+  "http_status": 201,
+  "latency_ms": 11.997,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "event_id": "recovery-20261113T170217Z-new",
+    "received_at": "2026-11-13T17:04:49.200Z",
+    "ingest_latency_ms": 1.526,
+    "duplicate": false,
+    "event": {
+      "event_id": "recovery-20261113T170217Z-new",
+      "vehicle_id": "lab-recovery",
+      "sequence": 2,
+      "event_time": "2026-11-13T17:04:49.115Z",
+      "received_at": "2026-11-13T17:04:49.200Z",
+      "lat": 40.761,
+      "lon": -73.971,
+      "simulation_run_id": "failure-20261113T170217Z",
+      "source_type": "synthetic",
+      "source_record_id": null,
+      "generation_method": "deterministic_linear_track",
+      "simulation_seed": 42
+    }
+  },
+  "ok": true
+}

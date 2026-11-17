@@ -1,0 +1,25 @@
+{
+  "hold_seconds": 10.0,
+  "detected_down_at": "2026-11-13T17:04:43.168Z",
+  "failed_post_during_outage": {
+    "http_status": null,
+    "error": "ConnectError",
+    "event_id": "recovery-20261113T170217Z-lost",
+    "response_ts_utc": "2026-11-13T17:04:43.248Z"
+  },
+  "restart_invoked_at": "2026-11-13T17:04:47.956Z",
+  "ready_at": "2026-11-13T17:04:49.094Z",
+  "successful_write_at": "2026-11-13T17:04:49.202Z",
+  "recovery_duration_ms": 6034,
+  "restart_to_ready_ms": 1138,
+  "restart_to_successful_write_ms": 1246,
+  "post_recovery_event_id": "recovery-20261113T170217Z-new",
+  "retry_after_recovery": {
+    "event_id": "recovery-20261113T170217Z-lost",
+    "http_status": 201,
+    "duplicate": false,
+    "ok": true
+  },
+  "definition": "recovery_duration_ms is the detected-down response time to the first successful post. It includes the intentional hold, not only process restart time.",
+  "problems": []
+}

@@ -1,0 +1,20 @@
+table inet fleettrace {
+  chain forward {
+    type filter hook forward priority filter; policy drop;
+
+    ct state established,related counter accept
+
+    iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.10 tcp dport 8443 counter accept
+    iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.10 ip daddr 10.30.30.10 tcp dport 27017 counter accept
+
+    iifname "c-rt" oifname "s-rt" ip saddr 10.10.10.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter accept
+    iifname "s-rt" oifname "c-rt" ip saddr 10.20.20.0/24 ip daddr 10.10.10.0/24 ip protocol icmp counter accept
+    iifname "s-rt" oifname "d-rt" ip saddr 10.20.20.0/24 ip daddr 10.30.30.0/24 ip protocol icmp counter accept
+    iifname "d-rt" oifname "s-rt" ip saddr 10.30.30.0/24 ip daddr 10.20.20.0/24 ip protocol icmp counter accept
+
+    iifname "c-rt" oifname "d-rt" ip daddr 10.30.30.0/24 counter drop
+    iifname "d-rt" oifname "c-rt" ip saddr 10.30.30.0/24 counter drop
+
+    counter drop
+  }
+}

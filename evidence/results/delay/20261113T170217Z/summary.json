@@ -1,0 +1,84 @@
+{
+  "run_id": "delay-seed42-20261113T170217Z",
+  "scenario": "delay",
+  "seed": 42,
+  "vehicles": 5,
+  "events_per_vehicle": 40,
+  "interval_ms": 0,
+  "workload_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "percentile_method": "nearest_rank",
+  "clock_domain": "client and API share the lab container clock; event_time is emission time, not a historical taxi timestamp",
+  "started_at": "2026-11-13T17:03:20.107Z",
+  "finished_at": "2026-11-13T17:04:37.230Z",
+  "duration_s": 77.123,
+  "freshness_threshold_ms": 10000,
+  "logical_posts": 200,
+  "post_successes": 200,
+  "post_failures": 0,
+  "attempts": 200,
+  "timeouts": 0,
+  "success_rate": 1.0,
+  "error_rate": 0.0,
+  "retry_queue_dropped": 0,
+  "flush_attempts": 0,
+  "http_latency_ms": {
+    "count": 200,
+    "mean": 323.903,
+    "p50": 324.061,
+    "p95": 344.486,
+    "max": 360.162
+  },
+  "delivery_lag_ms": {
+    "count": 200,
+    "mean": 163.87,
+    "p50": 166.0,
+    "p95": 177.0,
+    "max": 208.0
+  },
+  "location_age_ms": {
+    "count": 25,
+    "mean": 939.72,
+    "p50": 487.0,
+    "p95": 3098.0,
+    "max": 3413.0
+  },
+  "fresh_queries": 25,
+  "stale_queries": 0,
+  "stale_fraction": 0.0,
+  "events_per_second": 2.593,
+  "runtime": {
+    "python": "3.12.3",
+    "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.39"
+  },
+  "notes": [
+    "http_latency_ms is client monotonic time for successful POST attempts and includes network RTT plus server time.",
+    "delivery_lag_ms is API received_at minus client emission time. Both clocks are this container's UTC clock.",
+    "location_age_ms comes from GET /latest and uses the event's generated event_time.",
+    "A 10 second freshness threshold often stays fresh under a few hundred milliseconds of delay. Compare location_age_ms, not only stale_fraction.",
+    "Failed posts are retried, then one flush pass runs. success_rate is after that flush."
+  ],
+  "simulation_run_post_status": 201,
+  "network": {
+    "ping_raw": "PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.\n64 bytes from 10.20.20.10: icmp_seq=1 ttl=63 time=324 ms\n64 bytes from 10.20.20.10: icmp_seq=2 ttl=63 time=290 ms\n64 bytes from 10.20.20.10: icmp_seq=3 ttl=63 time=287 ms\n64 bytes from 10.20.20.10: icmp_seq=4 ttl=63 time=330 ms\n64 bytes from 10.20.20.10: icmp_seq=5 ttl=63 time=319 ms\n64 bytes from 10.20.20.10: icmp_seq=6 ttl=63 time=308 ms\n64 bytes from 10.20.20.10: icmp_seq=7 ttl=63 time=329 ms\n64 bytes from 10.20.20.10: icmp_seq=8 ttl=63 time=332 ms\n64 bytes from 10.20.20.10: icmp_seq=9 ttl=63 time=315 ms\n64 bytes from 10.20.20.10: icmp_seq=10 ttl=63 time=348 ms\n64 bytes from 10.20.20.10: icmp_seq=11 ttl=63 time=306 ms\n64 bytes from 10.20.20.10: icmp_seq=12 ttl=63 time=282 ms\n64 bytes from 10.20.20.10: icmp_seq=13 ttl=63 time=325 ms\n64 bytes from 10.20.20.10: icmp_seq=14 ttl=63 time=314 ms\n64 bytes from 10.20.20.10: icmp_seq=15 ttl=63 time=312 ms\n64 bytes from 10.20.20.10: icmp_seq=16 ttl=63 time=329 ms\n64 bytes from 10.20.20.10: icmp_seq=17 ttl=63 time=320 ms\n64 bytes from 10.20.20.10: icmp_seq=18 ttl=63 time=295 ms\n64 bytes from 10.20.20.10: icmp_seq=19 ttl=63 time=303 ms\n64 bytes from 10.20.20.10: icmp_seq=20 ttl=63 time=300 ms\n\n--- 10.20.20.10 ping statistics ---\n20 packets transmitted, 20 received, 0% packet loss, time 3902ms\nrtt min/avg/max/mdev = 281.959/313.376/348.356/16.704 ms, pipe 2\n",
+    "ping": {
+      "available": true,
+      "packet_loss_percent": 0.0,
+      "rtt_ms": {
+        "min": 281.959,
+        "avg": 313.376,
+        "max": 348.356,
+        "mdev": 16.704
+      }
+    },
+    "iperf_raw_path": "/work/evidence/results/delay/20261113T170217Z/iperf.json",
+    "iperf3": {
+      "available": true,
+      "bits_per_second": 29319657.099982988,
+      "megabits_per_second": 29.32,
+      "seconds": 3.004141,
+      "retransmits": 4
+    },
+    "tc": "# tc-client.txt\nqdisc netem 8003: root refcnt 11 limit 1000 delay 150ms  20ms\n\n# tc-router.txt\nqdisc netem 8004: root refcnt 11 limit 1000 delay 150ms  20ms\n",
+    "impairment": "delay 150ms 20ms"
+  }
+}

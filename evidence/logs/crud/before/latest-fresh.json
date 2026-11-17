@@ -1,0 +1,27 @@
+{
+  "operation": "get_latest",
+  "http_status": 200,
+  "error": "",
+  "latency_ms": 4.878,
+  "body": {
+    "vehicle_id": "lab-fresh",
+    "latest": {
+      "event_id": "crud-20261113T170217Z-fresh",
+      "vehicle_id": "lab-fresh",
+      "sequence": 1,
+      "event_time": "2026-11-13T17:02:42.525Z",
+      "received_at": "2026-11-13T17:02:42.590Z",
+      "lat": 40.7543219,
+      "lon": -73.9808123,
+      "simulation_run_id": "crud-20261113T170217Z",
+      "source_type": "synthetic",
+      "source_record_id": null,
+      "generation_method": "deterministic_linear_track",
+      "simulation_seed": 42
+    },
+    "age_ms": 77,
+    "stale": false,
+    "freshness_threshold_ms": 10000,
+    "observed_at": "2026-11-13T17:02:42.602Z"
+  }
+}

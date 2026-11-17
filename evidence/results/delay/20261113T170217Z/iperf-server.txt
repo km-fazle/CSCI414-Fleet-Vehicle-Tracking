@@ -1,0 +1,13 @@
+-----------------------------------------------------------
+Server listening on 5201 (test #1)
+-----------------------------------------------------------
+Accepted connection from 10.10.10.10, port 60746
+[  5] local 10.20.20.10 port 5201 connected to 10.10.10.10 port 60754
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.01   sec  0.00 Bytes  0.00 bits/sec                  
+[  5]   1.01-2.00   sec   640 KBytes  5.30 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   3.00-3.30   sec  3.88 MBytes   108 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-3.30   sec  10.5 MBytes  26.7 Mbits/sec                  receiver

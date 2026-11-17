@@ -1,0 +1,9 @@
+{
+  "operation": "create_vehicle",
+  "http_status": 409,
+  "error": "",
+  "latency_ms": 2.338,
+  "body": {
+    "detail": "vehicle_id already exists"
+  }
+}

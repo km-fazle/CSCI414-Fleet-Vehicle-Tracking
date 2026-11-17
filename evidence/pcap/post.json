@@ -1,0 +1,32 @@
+{
+  "operation": "post_telemetry",
+  "event_id": "cap-20261113T170217Z-000001",
+  "vehicle_id": "demo-001",
+  "send_ts_utc": "2026-11-13T17:03:00.671Z",
+  "response_ts_utc": "2026-11-13T17:03:00.684Z",
+  "http_status": 201,
+  "latency_ms": 13.358,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "event_id": "cap-20261113T170217Z-000001",
+    "received_at": "2026-11-13T17:03:00.680Z",
+    "ingest_latency_ms": 2.461,
+    "duplicate": false,
+    "event": {
+      "event_id": "cap-20261113T170217Z-000001",
+      "vehicle_id": "demo-001",
+      "sequence": 900001,
+      "event_time": "2026-11-13T17:03:00.573Z",
+      "received_at": "2026-11-13T17:03:00.680Z",
+      "lat": 40.7543219,
+      "lon": -73.9808123,
+      "simulation_run_id": "capture-20261113T170217Z",
+      "source_type": "synthetic",
+      "source_record_id": null,
+      "generation_method": "deterministic_linear_track",
+      "simulation_seed": 42
+    }
+  },
+  "ok": true
+}

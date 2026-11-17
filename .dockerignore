@@ -1,0 +1,9 @@
+.git
+.venv
+var
+evidence
+**/__pycache__
+**/.pytest_cache
+network/tls/private
+network/tls/certs
+**/*.pyc

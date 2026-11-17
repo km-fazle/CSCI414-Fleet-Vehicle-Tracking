@@ -1,0 +1,15 @@
+{
+  "operation": "ready",
+  "event_id": "",
+  "vehicle_id": "",
+  "send_ts_utc": "2026-11-13T17:04:49.088Z",
+  "response_ts_utc": "2026-11-13T17:04:49.094Z",
+  "http_status": 200,
+  "latency_ms": 6.471,
+  "timeout": false,
+  "error": "",
+  "body": {
+    "status": "ready"
+  },
+  "ok": true
+}

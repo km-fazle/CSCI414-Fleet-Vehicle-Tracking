@@ -1,0 +1,8 @@
+[
+  {
+    event_id: 'crud-20261113T170217Z-fresh',
+    event_time: ISODate('2026-11-13T17:02:42.525Z'),
+    location: { type: 'Point', coordinates: [ -73.9808123, 40.7543219 ] },
+    received_at: ISODate('2026-11-13T17:02:42.590Z')
+  }
+]

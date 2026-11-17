@@ -1,0 +1,83 @@
+{
+  "run_id": "baseline-seed42-20261113T170217Z",
+  "scenario": "baseline",
+  "seed": 42,
+  "vehicles": 5,
+  "events_per_vehicle": 40,
+  "interval_ms": 0,
+  "workload_sha256": "035ac2644627df3fb95f0b72d46427769630fb834d04402f7b00bfe329285476",
+  "percentile_method": "nearest_rank",
+  "clock_domain": "client and API share the lab container clock; event_time is emission time, not a historical taxi timestamp",
+  "started_at": "2026-11-13T17:03:09.385Z",
+  "finished_at": "2026-11-13T17:03:09.784Z",
+  "duration_s": 0.399,
+  "freshness_threshold_ms": 10000,
+  "logical_posts": 200,
+  "post_successes": 200,
+  "post_failures": 0,
+  "attempts": 200,
+  "timeouts": 0,
+  "success_rate": 1.0,
+  "error_rate": 0.0,
+  "retry_queue_dropped": 0,
+  "flush_attempts": 0,
+  "http_latency_ms": {
+    "count": 200,
+    "mean": 1.459,
+    "p50": 1.323,
+    "p95": 2.206,
+    "max": 3.461
+  },
+  "delivery_lag_ms": {
+    "count": 200,
+    "mean": 0.81,
+    "p50": 1.0,
+    "p95": 1.0,
+    "max": 3.0
+  },
+  "location_age_ms": {
+    "count": 25,
+    "mean": 7.04,
+    "p50": 3.0,
+    "p95": 28.0,
+    "max": 30.0
+  },
+  "fresh_queries": 25,
+  "stale_queries": 0,
+  "stale_fraction": 0.0,
+  "events_per_second": 500.969,
+  "runtime": {
+    "python": "3.12.3",
+    "platform": "Linux-6.10.14-linuxkit-aarch64-with-glibc2.39"
+  },
+  "notes": [
+    "http_latency_ms is client monotonic time for successful POST attempts and includes network RTT plus server time.",
+    "delivery_lag_ms is API received_at minus client emission time. Both clocks are this container's UTC clock.",
+    "location_age_ms comes from GET /latest and uses the event's generated event_time.",
+    "A 10 second freshness threshold often stays fresh under a few hundred milliseconds of delay. Compare location_age_ms, not only stale_fraction.",
+    "Failed posts are retried, then one flush pass runs. success_rate is after that flush."
+  ],
+  "simulation_run_post_status": 201,
+  "network": {
+    "ping_raw": "PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.\n64 bytes from 10.20.20.10: icmp_seq=1 ttl=63 time=0.110 ms\n64 bytes from 10.20.20.10: icmp_seq=2 ttl=63 time=0.629 ms\n64 bytes from 10.20.20.10: icmp_seq=3 ttl=63 time=0.044 ms\n64 bytes from 10.20.20.10: icmp_seq=4 ttl=63 time=0.102 ms\n64 bytes from 10.20.20.10: icmp_seq=5 ttl=63 time=0.067 ms\n64 bytes from 10.20.20.10: icmp_seq=6 ttl=63 time=0.055 ms\n64 bytes from 10.20.20.10: icmp_seq=7 ttl=63 time=0.076 ms\n64 bytes from 10.20.20.10: icmp_seq=8 ttl=63 time=0.234 ms\n64 bytes from 10.20.20.10: icmp_seq=9 ttl=63 time=0.077 ms\n64 bytes from 10.20.20.10: icmp_seq=10 ttl=63 time=0.052 ms\n64 bytes from 10.20.20.10: icmp_seq=11 ttl=63 time=0.055 ms\n64 bytes from 10.20.20.10: icmp_seq=12 ttl=63 time=0.088 ms\n64 bytes from 10.20.20.10: icmp_seq=13 ttl=63 time=0.110 ms\n64 bytes from 10.20.20.10: icmp_seq=14 ttl=63 time=0.160 ms\n64 bytes from 10.20.20.10: icmp_seq=15 ttl=63 time=0.039 ms\n64 bytes from 10.20.20.10: icmp_seq=16 ttl=63 time=0.062 ms\n64 bytes from 10.20.20.10: icmp_seq=17 ttl=63 time=0.065 ms\n64 bytes from 10.20.20.10: icmp_seq=18 ttl=63 time=0.071 ms\n64 bytes from 10.20.20.10: icmp_seq=19 ttl=63 time=0.045 ms\n64 bytes from 10.20.20.10: icmp_seq=20 ttl=63 time=0.048 ms\n\n--- 10.20.20.10 ping statistics ---\n20 packets transmitted, 20 received, 0% packet loss, time 3929ms\nrtt min/avg/max/mdev = 0.039/0.109/0.629/0.127 ms\n",
+    "ping": {
+      "available": true,
+      "packet_loss_percent": 0.0,
+      "rtt_ms": {
+        "min": 0.039,
+        "avg": 0.109,
+        "max": 0.629,
+        "mdev": 0.127
+      }
+    },
+    "iperf_raw_path": "/work/evidence/results/baseline/20261113T170217Z/iperf.json",
+    "iperf3": {
+      "available": true,
+      "bits_per_second": 83504484979.6778,
+      "megabits_per_second": 83504.485,
+      "seconds": 3.000901,
+      "retransmits": 148
+    },
+    "tc": "# tc-client.txt\nqdisc noqueue 0: root refcnt 2 \n\n# tc-router.txt\nqdisc noqueue 0: root refcnt 2 \n"
+  }
+}

@@ -1,0 +1,55 @@
+depth=1 CN = FleetTrace Lab CA
+verify return:1
+depth=0 CN = fleettrace-api.lab
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:CN = fleettrace-api.lab
+   i:CN = FleetTrace Lab CA
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov 13 17:02:29 2026 GMT; NotAfter: Nov 13 17:02:29 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDXTCCAkWgAwIBAgIUMoOeYQtAUi2JeEoGGLNmw9PuNAkwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRRmxlZXRUcmFjZSBMYWIgQ0EwHhcNMjYxMTEzMTcwMjI5
+WhcNMjcxMTEzMTcwMjI5WjAdMRswGQYDVQQDDBJmbGVldHRyYWNlLWFwaS5sYWIw
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQD26td4yNLCVgZ7YbzExSU5
+D9Al8GSdYhvSVHxLoW07tLsrRv33xKdtkaJ+XYQO+vTzMQTZRDzrYevm2gOXRTgk
++wmH8hahEYP74CloiZvtWPHVwksyzmxMVbtPG7MqEn7vObu70+BAr/fjFIeri5WK
+DzkYTCmazKQBvL45s//MtHZoy2W+QnjikyUi5R+Nuf0/DNAE3UOmm7c42QjMYL79
+f/l8WTlQi08xVPxl19y5P7WD1O24MckH7JLofRbbHl9N3l52uNSsNFagPXq+0DW7
+4pHqqzHDDFnB2xuv7O/b/dsxWPMcZYZzNSOyyrUzzzFsr25PjcFO4/g8SkFcUahL
+AgMBAAGjgZUwgZIwCQYDVR0TBAIwADALBgNVHQ8EBAMCBaAwEwYDVR0lBAwwCgYI
+KwYBBQUHAwEwIwYDVR0RBBwwGocEChQUCoISZmxlZXR0cmFjZS1hcGkubGFiMB0G
+A1UdDgQWBBTP2xXkDfqjtn56iSRM7HlNDr8kPTAfBgNVHSMEGDAWgBRgz+kHZ79A
+eKIfUBzTAzTo+lqRWDANBgkqhkiG9w0BAQsFAAOCAQEAPq5Wo+2rU/WvHXkLCrdd
+kx4ugaq7VK+qMIaJRS+SMewTyoU70glhC/ngbInuwSkx5Atwv55ffcMUCZ0/EJ4h
+of0jQZKQsuerkh/M4BKRwJ30TZz7f4TI6pOSqmPtQzSCQNaGQXw4+B3m3fevQkE4
+NJf+f1gbtwQwpLYCdz7WGNGZLKcA1+xMh6Jty6ohCj6s2ZSRcHuAfKzN/zuG5eyX
+NZRbvr87X5B810NRGQqrnUaDfPd0AL+kbgmykt4tpfjsy4cpu+iNEE/jAaQUOsSy
+UNwOB0xmTXnmiutN+9mnwVr2mtm4tvL2Id2g6cI0xeuU7q9xdGbCe3Tn6VvwjhML
+bw==
+-----END CERTIFICATE-----
+subject=CN = fleettrace-api.lab
+issuer=CN = FleetTrace Lab CA
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 1421 bytes and written 400 bytes
+Verification: OK
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS NOT supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+DONE

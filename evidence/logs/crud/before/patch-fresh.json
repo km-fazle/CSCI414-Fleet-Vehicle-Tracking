@@ -1,0 +1,33 @@
+{
+  "operation": "patch_vehicle",
+  "http_status": 200,
+  "error": "",
+  "latency_ms": 13.492,
+  "body": {
+    "vehicle_id": "lab-fresh",
+    "label": "Fresh lab vehicle updated",
+    "type": "simulated",
+    "active": true,
+    "metadata": {
+      "role": "crud-demo"
+    },
+    "created_at": "2026-11-13T17:01:13.194Z",
+    "updated_at": "2026-11-17T00:33:05.981Z",
+    "last_known": {
+      "event_id": "crud-20261113T170217Z-fresh",
+      "vehicle_id": "lab-fresh",
+      "sequence": 1,
+      "event_time": "2026-11-13T17:02:42.525Z",
+      "received_at": "2026-11-13T17:02:42.590Z",
+      "lat": 40.7348089,
+      "lon": -73.9986972,
+      "simulation_run_id": "crud-20261113T170217Z",
+      "source_type": "synthetic",
+      "source_record_id": null,
+      "generation_method": "deterministic_linear_track",
+      "simulation_seed": 42,
+      "age_ms": 286223465,
+      "stale": true
+    }
+  }
+}

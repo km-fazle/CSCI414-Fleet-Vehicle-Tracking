@@ -1,0 +1,12 @@
+{
+  "event_id": "cap-20261113T170217Z-000001",
+  "vehicle_id": "demo-001",
+  "event_time": "2026-11-13T17:03:00.573Z",
+  "lat": 40.7543219,
+  "lon": -73.9808123,
+  "sequence": 900001,
+  "simulation_run_id": "capture-20261113T170217Z",
+  "source_type": "synthetic",
+  "generation_method": "deterministic_linear_track",
+  "simulation_seed": 42
+}
